@@ -121,9 +121,10 @@
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
           <tr>
             <td width="100%" valign="middle">
-              <p>
-                <strong style="color:black;">News:</strong> Our DMPS paper was awarded Best Paper Runner-UP award. 
-              <p>
+           <p>
+          <strong style="color:black;">News:</strong> Our DMPS paper was awarded <span style="color: red;">ACML Best Paper Runner-UP award</span>.
+           </p>
+
 
              <p>
                 <strong style="color:black;">News:</strong>  I was invited to serve as an Area Chair for <a href="https://iclr.cc/">ICLR 2025</a>. 
@@ -189,17 +190,36 @@
         </table>
 
 <!--Use the following form if groups are used for different publications-->
-<!--        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">-->
-<!--          <tr>-->
-<!--            <td width="85%" valign="left">-->
-<!--              <papertitle><em>Neural-Control</em> Family: Stable and Robust Deep-learning-based Nonlinear Control in Dynamic Environments</papertitle> [<a href="https://www.gshi.me/blog/NeuralControl/">blog post</a>]-->
-<!--              <hr>-->
-<!--            </td>-->
-<!--          </tr>-->
-<!--        </table>-->
 
+
+          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+          <tr>
+            <td style="width:35%;vertical-align:middle">
+              <img src='/images/dmps_cover.png' width=100%>
+            </td>
+            <td style="width:65%;vertical-align:middle">
+              <p>
+                <a href="https://arxiv.org/abs/2211.12343">
+                  <papertitle>Diffusion Model Based Posterior Samplng for Noisy Linear Inverse Problems</papertitle>
+                </a>
+                <br>
+                <strong>Xiangming Meng<sup>*</sup></strong> and  <a href="https://scholar.google.com.hk/citations?user=NLBZuoEAAAAJ&hl=zh-CN">Yoshiyuki Kabashima</a>
+
+                <br>
+                [<a href="https://www.acml-conf.org/2024/">ACML2024</a> <span style="color: red;">Best Paper Runner-Up Award</span>]
+                [<a href="https://arxiv.org/abs/2211.12343">arXiv</a>]
+                [<a href="https://github.com/mengxiangming/dmps">code</a>]                
+                <br>
+                <p></p>
+                <p> With the rapid development of diffusion models and flow-based generative models, there has been a surge of interests in solving noisy linear inverse problems, e.g., super-resolution, deblurring, denoising, colorization, etc, with generative models. However, while remarkable reconstruction performances have been achieved, their inference time is typically too slow since most of them rely on the seminal diffusion posterior sampling (DPS) framework and thus to approximate the intractable likelihood score, time-consuming gradient calculation through back-propagation is needed. To address this issue, this paper provides a fast and effective solution by proposing a simple closed-form approximation to the likelihood score. For both diffusion and flow-based models, extensive experiments are conducted on various noisy linear inverse problems such as noisy super-resolution, denoising, deblurring, and colorization. In all these tasks, our method (namely DMPS) demonstrates highly competitive or even better reconstruction performances while being significantly faster than all the baseline methods.
+                </p>
+            </td>
+          </tr>
+
+        </table>
   
-            <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+  
+             <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
           <tr>
             <td style="width:35%;vertical-align:middle">
               <img src='/images/QCS-SGM-plus.png' width=100%>
@@ -224,38 +244,7 @@
             </td>
           </tr>
 
-        </table>
-  
-  
-          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-          <tr>
-            <td style="width:35%;vertical-align:middle">
-              <img src='/images/dmps_cover.png' width=100%>
-            </td>
-            <td style="width:65%;vertical-align:middle">
-              <p>
-                <a href="https://arxiv.org/abs/2211.12343">
-                  <papertitle>Diffusion Model Based Posterior Samplng for Noisy Linear Inverse Problems</papertitle>
-                </a>
-                <br>
-                <strong>Xiangming Meng<sup>*</sup></strong> and  <a href="https://scholar.google.com.hk/citations?user=NLBZuoEAAAAJ&hl=zh-CN">Yoshiyuki Kabashima</a>
-<!--                 <br>
-                <em>Advances in Neural Information Processing Systems (NeurIPS)</em>, 2021. -->
-                <br>
-                [<a href="https://www.acml-conf.org/2024/" style="color: red;">ACML2024</a> Best Paper Runner-Up Award]
-                [<a href="https://arxiv.org/abs/2211.12343">arXiv</a>]
-                [<a href="https://github.com/mengxiangming/dmps">code</a>]                
-                <br>
-                <p></p>
-                <p> With the rapid development of diffusion models and flow-based generative models, there has been a surge of interests in solving noisy linear inverse problems, e.g., super-resolution, deblurring, denoising, colorization, etc, with generative models. However, while remarkable reconstruction performances have been achieved, their inference time is typically too slow since most of them rely on the seminal diffusion posterior sampling (DPS) framework and thus to approximate the intractable likelihood score, time-consuming gradient calculation through back-propagation is needed. To address this issue, this paper provides a fast and effective solution by proposing a simple closed-form approximation to the likelihood score. For both diffusion and flow-based models, extensive experiments are conducted on various noisy linear inverse problems such as noisy super-resolution, denoising, deblurring, and colorization. In all these tasks, our method (namely DMPS) demonstrates highly competitive or even better reconstruction performances while being significantly faster than all the baseline methods.
-                </p>
-            </td>
-          </tr>
-
-        </table>
-  
-  
-  
+        </table> 
   
   
   
