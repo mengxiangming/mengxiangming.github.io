@@ -1,23 +1,62 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
-  <meta name=viewport content=“width=800”>
-  <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Xiangming Meng | Zhejiang University</title>
+  <meta name="description" content="Xiangming Meng is an Assistant Professor at Zhejiang University and leads the Probabilistic Inference and Learning (PIL) Lab. His research focuses on probabilistic generative modeling, diffusion and flow models, diffusion language models, and high-dimensional inference.">
+  <link rel="canonical" href="https://mengxiangming.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Xiangming Meng | Zhejiang University">
+  <meta property="og:description" content="Research, publications, teaching, and professional activities of Xiangming Meng at Zhejiang University.">
+  <meta property="og:url" content="https://mengxiangming.github.io/">
+  <meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&amp;display=swap" rel="stylesheet">
   <style type="text/css">
-    /* Color scheme stolen from Sergey Karayev */
-    
+    :root {
+      --text: #26313d;
+      --muted: #5f6f7f;
+      --link: #1769aa;
+      --link-hover: #9a4b00;
+      --rule: #dbe3ea;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     a {
-      color: #1772d0;
+      color: var(--link);
       text-decoration: none;
     }
-    
+
     a:focus,
     a:hover {
-      color: #f09228;
-      text-decoration: none;
+      color: var(--link-hover);
+      text-decoration: underline;
+      text-underline-offset: 0.15em;
     }
-    
+
+    a:focus-visible {
+      outline: 2px solid var(--link);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+    body {
+      margin: 0;
+      padding: 18px 0 32px;
+      color: var(--text);
+      background: #ffffff;
+    }
+
     body,
     td,
     th,
@@ -25,17 +64,47 @@
     p,
     a {
       font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 14px
+      font-size: 14px;
+      line-height: 1.55;
     }
-    
+
+    p {
+      margin: 0.75em 0;
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid var(--rule);
+      margin: 4px 20px;
+    }
+
+    .page-shell {
+      width: calc(100% - 32px);
+      max-width: 840px;
+      margin: 0 auto;
+      table-layout: fixed;
+    }
+
+    .page-shell table {
+      max-width: 100%;
+    }
+
+    .page-shell td {
+      overflow-wrap: anywhere;
+    }
+
     strong {
       font-family: 'Lato', Verdana, Helvetica, sans-serif;
       font-size: 14px;
     }
     
-    heading {
+    heading,
+    .section-heading {
       font-family: 'Lato', Verdana, Helvetica, sans-serif;
       font-size: 22px;
+      font-weight: 400;
+      line-height: 1.3;
+      margin: 0;
     }
     
     papertitle {
@@ -44,11 +113,32 @@
       font-weight: 700
     }
     
-    name {
+    name,
+    .name {
       font-family: 'Lato', Verdana, Helvetica, sans-serif;
       font-size: 32px;
+      line-height: 1.25;
+      font-weight: 400;
+      margin: 0;
     }
-    
+
+    .quick-links {
+      color: var(--muted);
+    }
+
+    .profile-photo {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+    }
+
+    .publication-image {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
     .one {
       width: 160px;
       height: 160px;
@@ -73,49 +163,145 @@
     span.highlight {
       background-color: #ffffd0;
     }
+
+    .visitor-map {
+      max-width: 300px;
+      margin-left: auto;
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    @media (max-width: 680px) {
+      body {
+        padding-top: 8px;
+      }
+
+      .page-shell {
+        width: calc(100% - 20px);
+        display: block;
+        overflow: hidden;
+      }
+
+      .page-shell > tbody,
+      .page-shell > tbody > tr,
+      .page-shell > tbody > tr > td {
+        display: block;
+        width: 100%;
+      }
+
+      .page-shell table {
+        width: 100% !important;
+        table-layout: fixed;
+      }
+
+      .intro-layout,
+      .intro-layout tbody {
+        display: block;
+        width: 100%;
+      }
+
+      .intro-layout tr {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .intro-copy,
+      .intro-photo {
+        display: block;
+        width: 100% !important;
+      }
+
+      .intro-photo {
+        order: -1;
+        max-width: 230px;
+        margin: 0 auto;
+        align-self: center;
+        padding-bottom: 0 !important;
+      }
+
+      .intro-copy {
+        padding-top: 12px !important;
+      }
+
+      table[width="100%"] td[style*="width:35%"],
+      table[width="100%"] td[style*="width:65%"] {
+        display: block;
+        width: 100% !important;
+      }
+
+      table[width="100%"] td[style*="width:35%"] {
+        max-width: 260px;
+        margin: 0 auto;
+        padding-bottom: 0;
+      }
+
+      td {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+      }
+
+      name,
+      .name {
+        font-size: 28px;
+      }
+    }
   </style>
-  <link rel="icon" type="image/png" href="icon.png">
-  <title>Xiangming Meng</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
-  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Xiangming Meng",
+      "url": "https://mengxiangming.github.io/",
+      "affiliation": {
+        "@type": "CollegeOrUniversity",
+        "name": "Zhejiang University"
+      },
+      "sameAs": [
+        "https://github.com/mengxiangming",
+        "https://scholar.google.com/citations?user=oV70ZoQAAAAJ&hl=en",
+        "https://zju-pil-lab.github.io/"
+      ]
+    }
+  </script>
 </head>
 
 <body>
-  <table width="800" border="0" align="center" cellspacing="0" cellpadding="0">
+  <table class="page-shell" role="presentation" border="0" align="center" cellspacing="0" cellpadding="0">
     <tr>
       <td>
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+        <table class="intro-layout" role="presentation" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
           <tr>
-            <td width="67%" valign="middle">
-              <p align="center">
-                <name>Xiangming Meng 孟 祥明</name>
-              </p>
+            <td class="intro-copy" width="67%" valign="middle">
+              <div align="center">
+                <h1 class="name">Xiangming Meng 孟祥明</h1>
+              </div>
               <p>
-              I am an Assistant Professor at The Zhejiang University-University of Illinois Urbana-Champaign Institute (<a href="https://zjui.intl.zju.edu.cn/en">ZJUI</a>), Zhejiang University. 
-                I was a Project Assistant Professor at the <a href="https://kaba-lab.org/en/">Kabashima Lab</a>  in the <a href="https://www.phys.s.u-tokyo.ac.jp/en/lp/ipi/">Institute for Physics of Intelligence (i &#960)</a>, <a href="https://www.u-tokyo.ac.jp/en">The University of Tokyo (UTokyo)</a> from April 2022 to March 2023. I completed my Ph.D. in 2016 from <a href="https://www.tsinghua.edu.cn/en/">Tsinghua University</a>, supervised by <a href="https://www.tsinghua.edu.cn/info/1167/93854.htm">Jianhua Lu</a>. I received a B.E. from <a href="https://en.xidian.edu.cn">Xidian University</a> in 2011.
-              Previously I was  a postdoctoral researcher in <a href="https://www.phys.s.u-tokyo.ac.jp/en/lp/ipi/"> i &#960 </a> , <a href="https://www.u-tokyo.ac.jp/en">UTokyo</a> under supervision of  <a href="https://researchmap.jp/yoshiyuki.kabashima?lang=en"> Yoshiyuki Kabashima</a> from April 2020 to March 2022, and
-                a postdoctoral researcher in the <a href="https://team-approx-bayes.github.io">Approximate Bayesian Inference Team</a>,  RIKEN center for Advanced Intelligence Project  (<a href="https://www.cs.washington.edu/"> RIKEN-AIP</a>) under supervision of  <a href="https://emtiyaz.github.io"> Emtiyaz Khan</a> from July 2019 to March 2020. I was a visiting researcher at University of Illinois Urbana-Champaign Institute (UIUC) from August 2023 to December 2023, hosted by  <a href="https://ece.illinois.edu/about/directory/faculty/z-liang">Zhi-Pei Liang</a>.   
-              I am broadly interested in the intersection of machine learning, information theory, and statistical mechanics, with a special focus on graphical models, Bayesian inference, and learning algorithms. 
+              I am an Assistant Professor at the Zhejiang University-University of Illinois Urbana-Champaign Institute (<a href="https://zjui.intl.zju.edu.cn/en">ZJUI</a>), Zhejiang University, where I lead the <a href="https://zju-pil-lab.github.io/">Probabilistic Inference and Learning (PIL) Lab</a>.
+                I was a Project Assistant Professor at the <a href="https://kaba-lab.org/en/">Kabashima Lab</a> in the <a href="https://www.phys.s.u-tokyo.ac.jp/en/lp/ipi/">Institute for Physics of Intelligence (i &#960;)</a>, <a href="https://www.u-tokyo.ac.jp/en">The University of Tokyo (UTokyo)</a> from April 2022 to March 2023. I completed my Ph.D. in 2016 from <a href="https://www.tsinghua.edu.cn/en/">Tsinghua University</a>, supervised by <a href="https://www.tsinghua.edu.cn/info/1167/93854.htm">Jianhua Lu</a>. I received a B.E. from <a href="https://en.xidian.edu.cn">Xidian University</a> in 2011.
+              Previously I was a postdoctoral researcher in <a href="https://www.phys.s.u-tokyo.ac.jp/en/lp/ipi/">i &#960;</a>, <a href="https://www.u-tokyo.ac.jp/en">UTokyo</a>, under the supervision of <a href="https://researchmap.jp/yoshiyuki.kabashima?lang=en">Yoshiyuki Kabashima</a> from April 2020 to March 2022, and
+                a postdoctoral researcher in the <a href="https://team-approx-bayes.github.io">Approximate Bayesian Inference Team</a>, RIKEN Center for Advanced Intelligence Project (<a href="https://aip.riken.jp/">RIKEN-AIP</a>) under the supervision of <a href="https://emtiyaz.github.io">Emtiyaz Khan</a> from July 2019 to March 2020. I was a visiting researcher at the University of Illinois Urbana-Champaign (UIUC) from August 2023 to December 2023, hosted by <a href="https://ece.illinois.edu/about/directory/faculty/z-liang">Zhi-Pei Liang</a>.
+              My research focuses on probabilistic generative modeling and high-dimensional inference, with current interests in diffusion and flow models, diffusion language models, and learning algorithms for inverse problems.
               </p>
 
               <!--, and a team leader of <a href="https://pillab.github.io/">PIL Lab</a>-->
               
-              <p align=center>
+              <p class="quick-links" align="center">
 <!--				  <a href="https://drive.google.com/file/d/1zwjK26dgouy9diFvVhvJ1fTsoCzi87j_/view?usp=sharing">CV</a> &nbsp/&nbsp-->
-                <a href="mailto:xiangmingmeng@intl.zju.edu.cn">Email</a> &nbsp/&nbsp
+                <a href="mailto:xiangmingmeng@intl.zju.edu.cn">Email</a> &nbsp;/&nbsp;
 <!--                <a href="https://www.gshi.me/blog/">Blog</a> &nbsp/&nbsp-->
-                <a href="https://scholar.google.com/citations?user=oV70ZoQAAAAJ&hl=en">Google Scholar</a> &nbsp/&nbsp
-               <a href="https://github.com/mengxiangming">Github</a> &nbsp/&nbsp
-               <a href="https://xiangmingmeng-blog.github.io/">Blog</a>  &nbsp/&nbsp
-                <a href="https://person.zju.edu.cn/xiangmingmeng">ZJU page</a> &nbsp/&nbsp
-              <!--   <a href="https://pillab.github.io/">PIL Lab</a>  -->
+                <a href="https://scholar.google.com/citations?user=oV70ZoQAAAAJ&hl=en">Google Scholar</a> &nbsp;/&nbsp;
+               <a href="https://github.com/mengxiangming">GitHub</a> &nbsp;/&nbsp;
+               <a href="https://xiangmingmeng-blog.github.io/">Blog</a> &nbsp;/&nbsp;
+                <a href="https://person.zju.edu.cn/xiangmingmeng">ZJU page</a> &nbsp;/&nbsp;
+                <a href="https://zju-pil-lab.github.io/">PIL Lab</a>
          
                 
 <!--                <a href="https://drive.google.com/file/d/1jKnpOO7L5J_y0_HGcvpqSm0fBJcO4OBM/view?usp=sharing"> Research Statement </a>-->
               </p>
             </td>
-            <td width="33%">
-              <img src="photo/meng.jpg" width='100%'>
+            <td class="intro-photo" width="33%">
+              <img class="profile-photo" src="photo/meng.jpg" alt="Xiangming Meng" decoding="async">
             </td>
           </tr>
         </table>
@@ -141,7 +327,7 @@
               
               
               <p>
-                <strong style="color:black;">News:</strong>   I was invited to serve as an Senior Program Committee (SPC) member for <a href="https://neurips.cc/">AAAI 2027</a>. 
+                <strong style="color:black;">News:</strong> I was invited to serve as a Senior Program Committee (SPC) member for <a href="https://aaai.org/conference/aaai/aaai-27/">AAAI 2027</a>.
               <p>
               
              <p>
@@ -162,7 +348,7 @@
 
 
                <p>
-                <strong style="color:black;">News:</strong>  I was invited to serve as an Area Chair for <a href="https://neurips.cc//">ICLR2026 Workshop on Deep Generative Model in Machine Learning:
+                <strong style="color:black;">News:</strong> I was invited to serve as an Area Chair for the <a href="https://delta-workshop.github.io/DeLTa2026/">ICLR 2026 Workshop on Deep Generative Models in Machine Learning:
                 Theory, Principle and Efficacy</a>. 
               <p>
 
@@ -178,7 +364,7 @@
               
 
              <p>
-                <strong style="color:black;">News:</strong>  One paper was accepted by CVPR2025 (Highlighed Paper). 
+                <strong style="color:black;">News:</strong> One paper was accepted by CVPR 2025 as a Highlight paper.
               <p>
 
            <p>
@@ -204,7 +390,7 @@
               <p>
               
               <p>
-                <strong style="color:black;">News:</strong>  One paper was accepted by IJCAI 2024</a>. 
+                <strong style="color:black;">News:</strong> One paper was accepted by IJCAI 2024.
               <p>
 
               <p>
@@ -221,7 +407,7 @@
                 <strong style="color:black;">News:</strong> I am looking for postdoctoral researchers and research assistants. Please send me your detailed CV if you are interested. 
               <p>
               <p>
-                <strong style="color:black;">News:</strong> I joined <a href="https://zjui.intl.zju.edu.cn/en">ZJUI</a>  as a tensure-track assistant professor from March 20th, 2023.
+                <strong style="color:black;">News:</strong> I joined <a href="https://zjui.intl.zju.edu.cn/en">ZJUI</a> as a tenure-track Assistant Professor on March 20, 2023.
               <p>
               <p>
                 <strong style="color:black;">News:</strong> Our paper <a href="https://openreview.net/forum?id=OOWLRfAI_V_">Quantized Compressed Sensing with Score-Based Generative Models</a>  was accepted by ICLR 2023.
@@ -241,10 +427,10 @@
           <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
           <tr>
             <td width="100%" valign="middle">
-              <heading>Open Positions</heading>
+              <h2 class="section-heading">Open Positions</h2>
               <br>
               <br>
-              <p> I am always looking for highly motivated postdoctoral researchers and research assistants with a great passion for doing research in machine learning, signal processing, wireless communication, and other related fields. Please send your detailed CV (including education background, publication list, and research interests) to the email address above if you are interested. 
+              <p>I am always looking for highly motivated postdoctoral researchers and research assistants interested in probabilistic machine learning, generative models, diffusion and flow models, diffusion language models, inverse problems, and related areas. Please send your detailed CV (including educational background, publication list, and research interests) to the email address above if you are interested.</p>
             </td>
           </tr>
         </table>
@@ -253,10 +439,10 @@
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
           <tr>
             <td width="100%" valign="middle">
-              <heading>Research and Selected Publications</heading>
+              <h2 class="section-heading">Research and Selected Publications</h2>
               <br>
               <br>
-              <p> My research interests lie at the intersection of  machine learning, information theory and statistical mechanics, with an exploration of common principles within different fields.  Specific focuses are graphical models, Bayesian inference, and learning algorithms.
+              <p>My research lies at the intersection of probabilistic machine learning, information theory, and statistical mechanics. Current directions include diffusion and flow models, diffusion language models, deep generative models for inverse problems, and high-dimensional statistical inference.</p>
               <p>For an up-to-date publication list, please see the <a href="https://scholar.google.com/citations?user=oV70ZoQAAAAJ&hl=en">Google Scholar</a> page. (*correspondence)</p>
             </td>
           </tr>
@@ -268,12 +454,12 @@
           <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
           <tr>
             <td style="width:35%;vertical-align:middle">
-              <img src='/images/dmps_cover.png' width=100%>
+              <img class="publication-image" src="/images/dmps_cover.png" alt="" loading="lazy" decoding="async">
             </td>
             <td style="width:65%;vertical-align:middle">
               <p>
                 <a href="https://arxiv.org/abs/2211.12343">
-                  <papertitle>Diffusion Model Based Posterior Samplng for Noisy Linear Inverse Problems</papertitle>
+                  <papertitle>Diffusion Model Based Posterior Sampling for Noisy Linear Inverse Problems</papertitle>
                 </a>
                 <br>
                 <strong>Xiangming Meng<sup>*</sup></strong> and  <a href="https://scholar.google.com.hk/citations?user=NLBZuoEAAAAJ&hl=zh-CN">Yoshiyuki Kabashima</a>
@@ -295,7 +481,7 @@
              <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
           <tr>
             <td style="width:35%;vertical-align:middle">
-              <img src='/images/QCS-SGM-plus.png' width=100%>
+              <img class="publication-image" src="/images/QCS-SGM-plus.png" alt="" loading="lazy" decoding="async">
             </td>
             <td style="width:65%;vertical-align:middle">
               <p>
@@ -325,7 +511,7 @@
           <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
           <tr>
             <td style="width:35%;vertical-align:middle">
-              <img src='/images/qcs-sgm-cover.png' width=100%>
+              <img class="publication-image" src="/images/qcs-sgm-cover.png" alt="" loading="lazy" decoding="async">
             </td>
             <td style="width:65%;vertical-align:middle">
               <p>
@@ -356,11 +542,11 @@
           <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
           <tr>
             <td style="width:35%;vertical-align:middle">
-              <img src='/images/aistats2023cover.png' width=100%>
+              <img class="publication-image" src="/images/aistats2023cover.png" alt="" loading="lazy" decoding="async">
             </td>
             <td style="width:65%;vertical-align:middle">
               <p>
-                <a href="https://arxiv.org/abs/2102.03988">
+                <a href="https://arxiv.org/abs/2110.08500">
                   <papertitle>On Model Selection Consistency of Lasso for High-Dimensional Ising Models</papertitle>
                 </a>
                 <br>
@@ -385,7 +571,7 @@
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
           <tr>
             <td style="width:35%;vertical-align:middle">
-              <img src='/images/NeurIPS2021_paper.png' width=100%>
+              <img class="publication-image" src="/images/NeurIPS2021_paper.png" alt="" loading="lazy" decoding="async">
             </td>
             <td style="width:65%;vertical-align:middle">
               <p>
@@ -414,7 +600,7 @@
           <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
               <tr>
                   <td style="width:35%;vertical-align:middle">
-                      <img src='/images/ICML2020_paper.png' width=100%>
+                      <img class="publication-image" src="/images/ICML2020_paper.png" alt="" loading="lazy" decoding="async">
                   </td>
                   <td style="width:65%;vertical-align:middle">
                       <p>
@@ -443,7 +629,7 @@
           <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
               <tr>
                   <td style="width:35%;vertical-align:middle">
-                      <img src='/images/JSAC2021_paper.png' width=100%>
+                      <img class="publication-image" src="/images/JSAC2021_paper.png" alt="" loading="lazy" decoding="async">
                   </td>
                   <td style="width:65%;vertical-align:middle">
                       <p>
@@ -478,7 +664,7 @@
           <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
               <tr>
                   <td style="width:35%;vertical-align:middle">
-                      <img src='/images/SPL_2018_paper.png' width=100%>
+                      <img class="publication-image" src="/images/SPL_2018_paper.png" alt="" loading="lazy" decoding="async">
                   </td>
                   <td style="width:65%;vertical-align:middle">
                       <p>
@@ -510,7 +696,7 @@
           <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
               <tr>
                   <td style="width:35%;vertical-align:middle">
-                      <img src='/images/SPL_2015_paper.png' width=100%>
+                      <img class="publication-image" src="/images/SPL_2015_paper.png" alt="" loading="lazy" decoding="async">
                   </td>
                   <td style="width:65%;vertical-align:middle">
                       <p>
@@ -542,7 +728,7 @@
  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
               <tr>
                   <td width="100%" valign="middle">
-                      <heading>Teaching</heading>
+                      <h2 class="section-heading">Teaching</h2>
                   </td>
               </tr>
           </table>
@@ -566,7 +752,7 @@
           <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
               <tr>
                   <td width="100%" valign="middle">
-                      <heading>Invited Talks</heading>
+                      <h2 class="section-heading">Invited Talks</h2>
                   </td>
               </tr>
           </table>
@@ -583,15 +769,15 @@
                           </a>
                         
                           <br> 2024 International Workshop on Learning and Information Theory, August 19-20, 2024
-                          [<a href="./talks/wolt24.pdf"target="_blank">slides</a>]
+                          [<a href="./talks/wolt24.pdf" target="_blank" rel="noopener noreferrer">slides</a>]
                           <br>
                           <br>
 
 
                         
                           <papertitle>Quantized Compressed Sensing with Score-based Generative Models</papertitle>
-                          <br> The 52th Asilomar Conference on Signals, Systems, and Computers 2023, Oct 30, 2023
-                          [<a href="./talks/Asilomar.pdf"target="_blank">slides</a>]
+                          <br> The 52nd Asilomar Conference on Signals, Systems, and Computers 2023, Oct 30, 2023
+                          [<a href="./talks/Asilomar.pdf" target="_blank" rel="noopener noreferrer">slides</a>]
                           <br>
                           <br>
 
@@ -600,7 +786,7 @@
 
                           <papertitle>Quantized Compressed Sensing with Score-based Generative Models</papertitle>
                           <br> The SINE Seminar, UIUC, Oct 16, 2023
-                          [<a href="./talks/SINE_semina.pdf"target="_blank">slides</a>]
+                          [<a href="./talks/SINE_semina.pdf" target="_blank" rel="noopener noreferrer">slides</a>]
                           <br>
                           <br>
 
@@ -621,13 +807,13 @@
                               <papertitle>A High Bias Low Variance Introduction to Approximate Inference</papertitle>
                           </a>
                           <br> Tokyo Institute of Technology,Tokyo, Japan,  Oct 11, 2019
-                          [<a href="./talks/TokyoTech_talk_2019.pdf"target="_blank">slides</a>]
-                          [<a href="https://github.com/mengxiangming/approximate-inference"target="_blank">code</a>]
+                          [<a href="./talks/TokyoTech_talk_2019.pdf" target="_blank" rel="noopener noreferrer">slides</a>]
+                          [<a href="https://github.com/mengxiangming/approximate-inference" target="_blank" rel="noopener noreferrer">code</a>]
                         
                           <br>
                           <br>
 
-                          <a href="https://aip.riken.jp/events/event_86679/?lang=ja}{Approximate Bayesian Inference for Generalized Linear Models">
+                          <a href="https://aip.riken.jp/events/event_86679/?lang=ja">
                               <papertitle>Approximate Bayesian Inference for Generalized Linear Models</papertitle>
                           </a>
                           <br> RIKEN Center for Advanced Intelligence Project (AIP), Tokyo, Japan,  Feb 27,  2019
@@ -660,7 +846,7 @@
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
           <tr>
             <td>
-              <heading>Professional Service</heading>
+              <h2 class="section-heading">Professional Service</h2>
             </td>
           </tr>
         </table>
@@ -670,7 +856,7 @@
             <td width="100%" valign="middle">
 
            <p>
-            <papertitle>Conference Area Chairs:</papertitle> NeurIPS (2024, 2025), ICLR (2025), ICML (2025).
+            <papertitle>Conference Area Chairs:</papertitle> NeurIPS (2024–2026), ICLR (2025–2027), and ICML (2025–2026). <papertitle>Senior Program Committee:</papertitle> AAAI 2027.
 
  
             </p>
@@ -695,7 +881,7 @@
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
           <tr>
             <td>
-              <heading>Misc.</heading>
+              <h2 class="section-heading">Misc.</h2>
               <p>
                 I love reading, music, and table tennis.
          </p>
@@ -737,38 +923,23 @@
 
         <hr>
   
-        <table width="80%" align="left" border="0" cellspacing="0" cellpadding="20">
+        <table role="presentation" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
           <tr>
             <td>
               <br>
               <p align="left">
-                <font size="2">
-
+                <small>
                   Based on <a href="https://jonbarron.info/">this website</a> and <a href="https://www.gshi.me">this website</a>.
-                  </font>
+                </small>
               </p>
             </td>
           </tr>
         </table>
 
-
-
-
-        <table width="20%" align="right" border="0" cellspacing="0" cellpadding="20">
-          
-        <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=tt&d=fso1QjvGeT_butzpL6aypAOb6OK3tTDx9emYr1ZoY-Q&co=2d78ad&cmo=3acc3a&cmn=ff5353&ct=ffffff'></script>
-<!--         <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=fso1QjvGeT_butzpL6aypAOb6OK3tTDx9emYr1ZoY-Q"></script> -->
-        <script type="text/javascript">
-          var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-          document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-        </script>
-        <script type="text/javascript">
-          try {
-            var pageTracker = _gat._getTracker("UA-7580334-1");
-            pageTracker._trackPageview();
-          } catch (err) {}
-        </script>
-        </td>
+        <div class="visitor-map">
+          <script async id="clustrmaps" src="https://cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=tt&d=fso1QjvGeT_butzpL6aypAOb6OK3tTDx9emYr1ZoY-Q&co=2d78ad&cmo=3acc3a&cmn=ff5353&ct=ffffff"></script>
+        </div>
+      </td>
     </tr>
   </table>
 </body>
